@@ -6,4 +6,4 @@ Receive instant job alerts on Telegram. Our system delivers the latest job openi
 
 <img width="400" alt="Djinni telegram bot" src="./public/djinni-bot-example.png">
 
-### Want to create your own vacancy bot or use the existing one? Just [send me an email](mailto:vgerun97@gmail.com)
+##### Want to create your own vacancy bot or use the existing one? Just [send me an email](mailto:vgerun97@gmail.com).
