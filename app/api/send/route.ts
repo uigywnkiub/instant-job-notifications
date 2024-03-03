@@ -31,18 +31,20 @@ export async function POST(
       );
     }
 
-    await resend.emails.send({
-      from: "instant-job-notifications@resend.dev",
-      to: process.env.RESEND_EMAIL,
-      subject: "Membership",
-      html: `<p><strong>${email}</strong></p>`,
-    });
+    // await resend.emails.send({
+    //   from: "instant-job-notifications@resend.dev",
+    //   to: process.env.RESEND_EMAIL,
+    //   subject: "Membership",
+    //   html: `<p><strong>${email}</strong></p>`,
+    // });
 
     return NextResponse.json(
       { message: "ok" },
       {
         headers: {
-          "Set-Cookie": "isSendEmail=true; HttpOnly; Secure",
+          "Set-Cookie": `isSendEmail=true; Max-Age=${
+            24 * 60 * 60
+          }; Path=/; HttpOnly; Secure`,
         },
       }
     );
